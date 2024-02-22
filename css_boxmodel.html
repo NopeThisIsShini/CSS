@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BoxModel</title>
+    <style>
+        /* universal selector "*" */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: black;
+            padding: 10px; /* it apply inside the content, it's include bk-color */
+            margin: 25px; /* if apply outside the content */
+            border: 2px solid blue; /* between padding and margin */
+            height: 200px; /* height of only content, border and padding is excluded */
+            box-sizing: border-box; /* content + border + padding = height(200) */
+            /* basically box-sizing change the def. of height */
+
+        }
+        .box2{
+            color: brown;
+            padding: 10px; 
+            margin: 25px; 
+            border: 2px solid blue; 
+            height: 200px; 
+            box-sizing: border-box; 
+        }
+        /* margin collapse 
+        basically when two selector margin overlapped, then the maximum margin is applied between two selector
+        let one selector margin is 10 px and another is 25 px, here 25 px margin will be applied between two selector */
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>
