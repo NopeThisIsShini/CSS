@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /*
+        The Cascade Algorithm
+        CSS stands for cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element.
+        The cascade algorithm has 4 distinct stages.
+        1. POSITION AND ORDER OF APPEARANCE: The order in which your css rules appear
+        2. SPECIFICITY: an algorithm that determines which CSS selector has the strongest match.
+        3. ORIGIN
+        4. IMPORTANCE : This has high specificity, its priority is that it will override inline css too
+
+
+        Specificity : an algorithm that determines which CSS selector has the strongest match.
+         when selectors are not same, there specificity is used. 
+
+        -: The order of specificity :-
+        Inline style > ID selector > Class or Attribute selector > Element selector > universal selector
+        */
+        h1{
+            color: aliceblue;
+        }  
+        
+
+        /* if the selector is same type like( all are class selector or id selector ) then conflict will be resolved 
+        in all selector which one is later, */
+        .yellow{
+            color: yellow;
+        }
+        .red{
+            color: red important; /* use of importance */
+        }
+        .purple{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1 class="yellow red purple">Showing css specificity</h1>
+</div>
+</body>
+</html>
