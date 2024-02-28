@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        html {
+            /* html is the root element */
+            font-size: 10px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 3px rgb(111, 180, 59) solid;
+            /* width: 500px; */
+            width: 80vw;
+            /* Vw means viewport width, this adjust size according to the device resolution, 
+            100 vw means it take 100% of that device*/
+            height: 10vh;
+            /* let I want to take 10 % of the height of the viewport, 
+            I will use 10vh */
+            margin: auto;
+            /*margin auto means, automatically put margin from left and right i.e. want to center div */
+
+            background-color: rgb(116, 186, 172);
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 3px rgb(37, 173, 175) solid;
+            width: 80vw;
+            height: 80vh;
+            background-color: rgb(115, 197, 205);
+            margin: 23px auto;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            /* if we want to separate horizontal and vertical margin,
+            we can use margin-shortened property
+            here 23px is applied on top-bottom and auto is set from left-right */
+            font-size: 3rem;
+            /* 3rem,3 times of root element */
+        }
+        .mycon{
+            box-sizing: border-box;
+            border: 3px rgb(37, 173, 175) solid;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            background-color: rgb(115, 197, 205);
+            margin: 23px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga iure asperiores numquam voluptas labore? Quasi
+        culpa magni tenetur suscipit iure, nostrum quia libero.
+    </div>
+    <div class="mycon">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestiae adipisci nam enim, perspiciatis hic
+        possimus dicta excepturi, quos expedita pariatur sequi aspernatur?
+    </div>
+</body>
+
+</html>
